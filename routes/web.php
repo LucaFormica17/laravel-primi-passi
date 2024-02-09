@@ -15,6 +15,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $message = 'Hello World!';
-    $students = ['Alessio','Simone','Matteo','Vittorio','Christian'];
-    return view('my-app', compact('message', 'students'));
-});
+    return view('my-app', compact('message'));
+})->name('homepage');
+
+Route::get('/man', function () {
+    $mans = ['Alessio','Simone','Matteo','Vittorio','Christian'];
+    return view('man', compact('mans'));
+})->name('man');
+
+Route::get('/woman', function () {
+    $womans = ['Giulia','Federica','Silvia','Chiara','Gloria'];
+    return view('woman', compact('womans'));
+})->name('woman');
