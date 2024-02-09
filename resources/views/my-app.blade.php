@@ -12,6 +12,11 @@
             <div class="row">
                 <div class="col-12">
                     <h1 class="text-center my-3">{{$message}}</h1>
+                    <ul class="list-unstyled">
+                        @foreach ($students as $student)
+                            <li>{{$student}}</li>    
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
